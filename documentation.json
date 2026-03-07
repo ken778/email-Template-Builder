@@ -1,7 +1,475 @@
 {
     "pipes": [],
-    "interfaces": [],
-    "injectables": [],
+    "interfaces": [
+        {
+            "name": "BlockProps",
+            "id": "interface-BlockProps-aca2f4d5dbd6d16cc32de027777acdf43f167e6225b335ddbc49dc91789027f33d6f5bef65453839c8ade629cc981e8a3b91f9f45250240f4b3fcc9e4b0098bf",
+            "file": "src/app/design-system/models/block.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type BlockType = 'header' | 'text' | 'image' | 'button';\r\nexport type TextAlignment = 'left' | 'center' | 'right';\r\nexport type ButtonVariant = 'primary' | 'secondary';\r\n\r\nexport interface BlockProps {\r\n  // HeaderBlock\r\n  title?: string;\r\n  logoUrl?: string;\r\n  bgColor?: string;\r\n  \r\n  // TextBlock\r\n  content?: string;\r\n  alignment?: TextAlignment;\r\n  \r\n  // ImageBlock\r\n  src?: string;\r\n  alt?: string;\r\n  width?: string;\r\n  \r\n  // ButtonBlock\r\n  label?: string;\r\n  url?: string;\r\n  variant?: ButtonVariant;\r\n  \r\n  // Common\r\n  [key: string]: any;\r\n}\r\n\r\nexport interface TemplateBlock {\r\n  id: string;\r\n  type: BlockType;\r\n  props: BlockProps;\r\n}",
+            "properties": [
+                {
+                    "name": "alignment",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TextAlignment",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "alt",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "bgColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "content",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "logoUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "src",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "url",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "variant",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonVariant",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "indexSignatures": [
+                {
+                    "id": "index-declaration-aca2f4d5dbd6d16cc32de027777acdf43f167e6225b335ddbc49dc91789027f33d6f5bef65453839c8ade629cc981e8a3b91f9f45250240f4b3fcc9e4b0098bf",
+                    "args": [
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "any",
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "kind": 182,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "TemplateBlock",
+            "id": "interface-TemplateBlock-aca2f4d5dbd6d16cc32de027777acdf43f167e6225b335ddbc49dc91789027f33d6f5bef65453839c8ade629cc981e8a3b91f9f45250240f4b3fcc9e4b0098bf",
+            "file": "src/app/design-system/models/block.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type BlockType = 'header' | 'text' | 'image' | 'button';\r\nexport type TextAlignment = 'left' | 'center' | 'right';\r\nexport type ButtonVariant = 'primary' | 'secondary';\r\n\r\nexport interface BlockProps {\r\n  // HeaderBlock\r\n  title?: string;\r\n  logoUrl?: string;\r\n  bgColor?: string;\r\n  \r\n  // TextBlock\r\n  content?: string;\r\n  alignment?: TextAlignment;\r\n  \r\n  // ImageBlock\r\n  src?: string;\r\n  alt?: string;\r\n  width?: string;\r\n  \r\n  // ButtonBlock\r\n  label?: string;\r\n  url?: string;\r\n  variant?: ButtonVariant;\r\n  \r\n  // Common\r\n  [key: string]: any;\r\n}\r\n\r\nexport interface TemplateBlock {\r\n  id: string;\r\n  type: BlockType;\r\n  props: BlockProps;\r\n}",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "props",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "BlockProps",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 32
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "BlockType",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 31
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "TemplateService",
+            "id": "injectable-TemplateService-b037b0b8614d6de36b65989b336ed67bbd99d9807e9259139b051103d9b4e6340b58b6c807ff52f2da533c52f69d97495d83aaff3fe25eaa5255aec5d0877d37",
+            "file": "src/app/template-builder/services/template.service.ts",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "defaultValue": "this.blocksSignal.asReadonly()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "blocksSignal",
+                    "defaultValue": "signal([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<TemplateBlock[]>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 7,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "selectedBlock",
+                    "defaultValue": "computed(() => {\r\n    const id = this.selectedBlockIdSignal();\r\n    if (!id) return null;\r\n    return this.blocksSignal().find(b => b.id === id) || null;\r\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "selectedBlockId",
+                    "defaultValue": "this.selectedBlockIdSignal.asReadonly()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "selectedBlockIdSignal",
+                    "defaultValue": "signal(null)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<string | null>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "addBlock",
+                    "args": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "clearAll",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 83,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getDefaultProps",
+                    "args": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "BlockProps",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeBlock",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectBlock",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string | null",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 48,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string | null",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateBlockProps",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "props",
+                            "type": "BlockProps",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 40,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "props",
+                            "type": "BlockProps",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable, signal, computed, WritableSignal } from '@angular/core';\r\nimport { TemplateBlock, BlockType, BlockProps } from '../../design-system/models/block.models';\r\n\r\n@Injectable({ providedIn: 'root' })\r\nexport class TemplateService {\r\n  // Signal holding array of blocks\r\n  private blocksSignal: WritableSignal<TemplateBlock[]> = signal([]);\r\n  \r\n  // Signal for currently selected block ID \r\n  private selectedBlockIdSignal: WritableSignal<string | null> = signal(null);\r\n\r\n  // Read-only signals for components to consume\r\n  readonly blocks = this.blocksSignal.asReadonly();\r\n  readonly selectedBlockId = this.selectedBlockIdSignal.asReadonly();\r\n  \r\n  readonly selectedBlock = computed(() => {\r\n    const id = this.selectedBlockIdSignal();\r\n    if (!id) return null;\r\n    return this.blocksSignal().find(b => b.id === id) || null;\r\n  });\r\n\r\n  addBlock(type: BlockType): void {\r\n    const newBlock: TemplateBlock = {\r\n      id: crypto.randomUUID(),\r\n      type,\r\n      props: this.getDefaultProps(type)\r\n    };\r\n    \r\n    this.blocksSignal.update(blocks => [...blocks, newBlock]);\r\n    this.selectBlock(newBlock.id); \r\n  }\r\n\r\n  removeBlock(id: string): void {\r\n    this.blocksSignal.update(blocks => blocks.filter(b => b.id !== id));\r\n    if (this.selectedBlockIdSignal() === id) {\r\n      this.selectBlock(null);\r\n    }\r\n  }\r\n\r\n  updateBlockProps(id: string, props: BlockProps): void {\r\n    this.blocksSignal.update(blocks =>\r\n      blocks.map(block =>\r\n        block.id === id ? { ...block, props: { ...block.props, ...props } } : block\r\n      )\r\n    );\r\n  }\r\n\r\n  selectBlock(id: string | null): void {\r\n    this.selectedBlockIdSignal.set(id);\r\n  }\r\n\r\n  private getDefaultProps(type: BlockType): BlockProps {\r\n    switch (type) {\r\n      case 'header':\r\n        return {\r\n          title: 'Welcome to Everlytic',\r\n          logoUrl: '',\r\n          bgColor: '#00B4D8'\r\n        };\r\n      case 'text':\r\n        return {\r\n          content: 'Enter your text content here. This is a sample paragraph that you can edit.',\r\n          alignment: 'left'\r\n        };\r\n      case 'image':\r\n        return {\r\n          src: 'https://via.placeholder.com/600x200?text=Your+Image',\r\n          alt: 'Placeholder image',\r\n          width: '100%'\r\n        };\r\n      case 'button':\r\n        return {\r\n          label: 'Click Here',\r\n          url: '#',\r\n          variant: 'primary'\r\n        };\r\n      default:\r\n        return {};\r\n    }\r\n  }\r\n\r\n\r\n  clearAll(): void {\r\n    this.blocksSignal.set([]);\r\n    this.selectBlock(null);\r\n  }\r\n}",
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -9,7 +477,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-9fc96151209c7c5b79bad1abb420660bba2a5b356896d64af35a5477db0ede75811cb14bdafb588445b8d3f7f8b3933605e949b503083e8a92f03d2423a15d4f",
+            "id": "component-AppComponent-f00b121a38a3b58715b0c2264a25f312987b5f96c4267436f36a28f8fa08d73a40eb4600eaf53b7f64fc545f713800c9a170c99db0e43e0917f713de119d6b90",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -19,9 +487,8 @@
             "selector": "app-root",
             "styleUrls": [],
             "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
+            "template": "<app-template-builder></app-template-builder>",
+            "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
@@ -36,7 +503,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 12
                 }
             ],
             "methodsClass": [],
@@ -45,17 +512,20 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "TemplateBuilderComponent",
+                    "type": "component"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss'\r\n})\r\nexport class AppComponent {\r\n  title = 'everlytic-email-builder';\r\n}\r\n",
-            "styleUrl": "./app.component.scss",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { TemplateBuilderComponent } from './template-builder/components/template-builder/template-builder.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [TemplateBuilderComponent],\r\n  template: `<app-template-builder></app-template-builder>`,\r\n  styles: []\r\n})\r\nexport class AppComponent {\r\n  title = 'everlytic-email-builder';\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
-            "extends": [],
-            "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->\r\n<!-- * * * * * * * to get started with your project! * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<style>\r\n  :host {\r\n    --bright-blue: oklch(51.01% 0.274 263.83);\r\n    --electric-violet: oklch(53.18% 0.28 296.97);\r\n    --french-violet: oklch(47.66% 0.246 305.88);\r\n    --vivid-pink: oklch(69.02% 0.277 332.77);\r\n    --hot-red: oklch(61.42% 0.238 15.34);\r\n    --orange-red: oklch(63.32% 0.24 31.68);\r\n\r\n    --gray-900: oklch(19.37% 0.006 300.98);\r\n    --gray-700: oklch(36.98% 0.014 302.71);\r\n    --gray-400: oklch(70.9% 0.015 304.04);\r\n\r\n    --red-to-pink-to-purple-vertical-gradient: linear-gradient(\r\n      180deg,\r\n      var(--orange-red) 0%,\r\n      var(--vivid-pink) 50%,\r\n      var(--electric-violet) 100%\r\n    );\r\n\r\n    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(\r\n      90deg,\r\n      var(--orange-red) 0%,\r\n      var(--vivid-pink) 50%,\r\n      var(--electric-violet) 100%\r\n    );\r\n\r\n    --pill-accent: var(--bright-blue);\r\n\r\n    font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\r\n      \"Segoe UI Symbol\";\r\n    box-sizing: border-box;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n  }\r\n\r\n  h1 {\r\n    font-size: 3.125rem;\r\n    color: var(--gray-900);\r\n    font-weight: 500;\r\n    line-height: 100%;\r\n    letter-spacing: -0.125rem;\r\n    margin: 0;\r\n    font-family: \"Inter Tight\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\r\n      \"Segoe UI Symbol\";\r\n  }\r\n\r\n  p {\r\n    margin: 0;\r\n    color: var(--gray-700);\r\n  }\r\n\r\n  main {\r\n    width: 100%;\r\n    min-height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 1rem;\r\n    box-sizing: inherit;\r\n    position: relative;\r\n  }\r\n\r\n  .angular-logo {\r\n    max-width: 9.2rem;\r\n  }\r\n\r\n  .content {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    width: 100%;\r\n    max-width: 700px;\r\n    margin-bottom: 3rem;\r\n  }\r\n\r\n  .content h1 {\r\n    margin-top: 1.75rem;\r\n  }\r\n\r\n  .content p {\r\n    margin-top: 1.5rem;\r\n  }\r\n\r\n  .divider {\r\n    width: 1px;\r\n    background: var(--red-to-pink-to-purple-vertical-gradient);\r\n    margin-inline: 0.5rem;\r\n  }\r\n\r\n  .pill-group {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: start;\r\n    flex-wrap: wrap;\r\n    gap: 1.25rem;\r\n  }\r\n\r\n  .pill {\r\n    display: flex;\r\n    align-items: center;\r\n    --pill-accent: var(--bright-blue);\r\n    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\r\n    color: var(--pill-accent);\r\n    padding-inline: 0.75rem;\r\n    padding-block: 0.375rem;\r\n    border-radius: 2.75rem;\r\n    border: 0;\r\n    transition: background 0.3s ease;\r\n    font-family: var(--inter-font);\r\n    font-size: 0.875rem;\r\n    font-style: normal;\r\n    font-weight: 500;\r\n    line-height: 1.4rem;\r\n    letter-spacing: -0.00875rem;\r\n    text-decoration: none;\r\n  }\r\n\r\n  .pill:hover {\r\n    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\r\n  }\r\n\r\n  .pill-group .pill:nth-child(6n + 1) {\r\n    --pill-accent: var(--bright-blue);\r\n  }\r\n  .pill-group .pill:nth-child(6n + 2) {\r\n    --pill-accent: var(--french-violet);\r\n  }\r\n  .pill-group .pill:nth-child(6n + 3),\r\n  .pill-group .pill:nth-child(6n + 4),\r\n  .pill-group .pill:nth-child(6n + 5) {\r\n    --pill-accent: var(--hot-red);\r\n  }\r\n\r\n  .pill-group svg {\r\n    margin-inline-start: 0.25rem;\r\n  }\r\n\r\n  .social-links {\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 0.73rem;\r\n    margin-top: 1.5rem;\r\n  }\r\n\r\n  .social-links path {\r\n    transition: fill 0.3s ease;\r\n    fill: var(--gray-400);\r\n  }\r\n\r\n  .social-links a:hover svg path {\r\n    fill: var(--gray-900);\r\n  }\r\n\r\n  @media screen and (max-width: 650px) {\r\n    .content {\r\n      flex-direction: column;\r\n      width: max-content;\r\n    }\r\n\r\n    .divider {\r\n      height: 1px;\r\n      width: 100%;\r\n      background: var(--red-to-pink-to-purple-horizontal-gradient);\r\n      margin-block: 1.5rem;\r\n    }\r\n  }\r\n</style>\r\n\r\n<main class=\"main\">\r\n  <div class=\"content\">\r\n    <div class=\"left-side\">\r\n      <svg\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 982 239\"\r\n        fill=\"none\"\r\n        class=\"angular-logo\"\r\n      >\r\n        <g clip-path=\"url(#a)\">\r\n          <path\r\n            fill=\"url(#b)\"\r\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\r\n          />\r\n          <path\r\n            fill=\"url(#c)\"\r\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\r\n          />\r\n        </g>\r\n        <defs>\r\n          <radialGradient\r\n            id=\"c\"\r\n            cx=\"0\"\r\n            cy=\"0\"\r\n            r=\"1\"\r\n            gradientTransform=\"rotate(118.122 171.182 60.81) scale(205.794)\"\r\n            gradientUnits=\"userSpaceOnUse\"\r\n          >\r\n            <stop stop-color=\"#FF41F8\" />\r\n            <stop offset=\".707\" stop-color=\"#FF41F8\" stop-opacity=\".5\" />\r\n            <stop offset=\"1\" stop-color=\"#FF41F8\" stop-opacity=\"0\" />\r\n          </radialGradient>\r\n          <linearGradient\r\n            id=\"b\"\r\n            x1=\"0\"\r\n            x2=\"982\"\r\n            y1=\"192\"\r\n            y2=\"192\"\r\n            gradientUnits=\"userSpaceOnUse\"\r\n          >\r\n            <stop stop-color=\"#F0060B\" />\r\n            <stop offset=\"0\" stop-color=\"#F0070C\" />\r\n            <stop offset=\".526\" stop-color=\"#CC26D5\" />\r\n            <stop offset=\"1\" stop-color=\"#7702FF\" />\r\n          </linearGradient>\r\n          <clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h982v239H0z\" /></clipPath>\r\n        </defs>\r\n      </svg>\r\n      <h1>Hello, {{ title }}</h1>\r\n      <p>Congratulations! Your app is running. 🎉</p>\r\n    </div>\r\n    <div class=\"divider\" role=\"separator\" aria-label=\"Divider\"></div>\r\n    <div class=\"right-side\">\r\n      <div class=\"pill-group\">\r\n        @for (item of [\r\n          { title: 'Explore the Docs', link: 'https://angular.dev' },\r\n          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },\r\n          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },\r\n          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },\r\n          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },\r\n        ]; track item.title) {\r\n          <a\r\n            class=\"pill\"\r\n            [href]=\"item.link\"\r\n            target=\"_blank\"\r\n            rel=\"noopener\"\r\n          >\r\n            <span>{{ item.title }}</span>\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              height=\"14\"\r\n              viewBox=\"0 -960 960 960\"\r\n              width=\"14\"\r\n              fill=\"currentColor\"\r\n            >\r\n              <path\r\n                d=\"M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z\"\r\n              />\r\n            </svg>\r\n          </a>\r\n        }\r\n      </div>\r\n      <div class=\"social-links\">\r\n        <a\r\n          href=\"https://github.com/angular/angular\"\r\n          aria-label=\"Github\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"25\"\r\n            height=\"24\"\r\n            viewBox=\"0 0 25 24\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Github\"\r\n          >\r\n            <path\r\n              d=\"M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n        <a\r\n          href=\"https://twitter.com/angular\"\r\n          aria-label=\"Twitter\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"24\"\r\n            height=\"24\"\r\n            viewBox=\"0 0 24 24\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Twitter\"\r\n          >\r\n            <path\r\n              d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n        <a\r\n          href=\"https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw\"\r\n          aria-label=\"Youtube\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"29\"\r\n            height=\"20\"\r\n            viewBox=\"0 0 29 20\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Youtube\"\r\n          >\r\n            <path\r\n              fill-rule=\"evenodd\"\r\n              clip-rule=\"evenodd\"\r\n              d=\"M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</main>\r\n\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n\r\n"
+            "extends": []
         },
         {
             "name": "ButtonBlockComponent",
@@ -272,6 +742,450 @@
             "templateData": "<div class=\"ds-image-wrapper\">\r\n  <img [src]=\"src\" [alt]=\"alt\" [style.width]=\"width\" />\r\n</div>"
         },
         {
+            "name": "TemplateBuilderComponent",
+            "id": "component-TemplateBuilderComponent-8ae89d79fe7c6081265b3191755302b9092f8f0fdb5d682419115c4cf417d57ab39dacce95daccf75f89b7fe49242370c3863fc82365ea4f457c521ef6f993f7",
+            "file": "src/app/template-builder/components/template-builder/template-builder.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-template-builder",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./template-builder.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "blocks",
+                    "defaultValue": "this.templateService.blocks",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 28,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "selectedBlock",
+                    "defaultValue": "this.templateService.selectedBlock",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 29,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "selectedBlockId",
+                    "defaultValue": "this.templateService.selectedBlockId",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "templateService",
+                    "defaultValue": "inject(TemplateService)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "addBlock",
+                    "args": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "type",
+                            "type": "BlockType",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getBlockProp",
+                    "args": [
+                        {
+                            "name": "block",
+                            "type": "TemplateBlock",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "block",
+                            "type": "TemplateBlock",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getProp",
+                    "args": [
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 53,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "isSelected",
+                    "args": [
+                        {
+                            "name": "blockId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "blockId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeBlock",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectBlock",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 42,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateProp",
+                    "args": [
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 46,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "HeaderBlockComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TextBlockComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ImageBlockComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonBlockComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { TemplateService } from '../../services/template.service';\r\nimport { TemplateBlock, BlockType, BlockProps } from '../../../design-system/models/block.models';\r\nimport { HeaderBlockComponent } from '../../../design-system/components/header-block/header-block.component';\r\nimport { TextBlockComponent } from '../../../design-system/components/text-block/text-block.component';\r\nimport { ImageBlockComponent } from '../../../design-system/components/image-block/image-block.component';\r\nimport { ButtonBlockComponent } from '../../../design-system/components/button-block/button-block.component';\r\n\r\n@Component({\r\n  selector: 'app-template-builder',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    FormsModule,\r\n    HeaderBlockComponent,\r\n    TextBlockComponent,\r\n    ImageBlockComponent,\r\n    ButtonBlockComponent\r\n  ],\r\n  templateUrl: './template-builder.component.html',\r\n  styleUrl: './template-builder.component.scss'\r\n})\r\nexport class TemplateBuilderComponent {\r\n  private templateService = inject(TemplateService);\r\n  \r\n  readonly blocks = this.templateService.blocks;\r\n  readonly selectedBlock = this.templateService.selectedBlock;\r\n  readonly selectedBlockId = this.templateService.selectedBlockId;\r\n\r\n\r\n  addBlock(type: BlockType): void {\r\n    this.templateService.addBlock(type);\r\n  }\r\n\r\n  removeBlock(id: string, event: Event): void {\r\n    event.stopPropagation();\r\n    this.templateService.removeBlock(id);\r\n  }\r\n\r\n  selectBlock(id: string): void {\r\n    this.templateService.selectBlock(id);\r\n  }\r\n\r\n  updateProp(key: string, value: any): void {\r\n    const block = this.selectedBlock();\r\n    if (block) {\r\n      this.templateService.updateBlockProps(block.id, { [key]: value });\r\n    }\r\n  }\r\n\r\n  getProp(key: string, defaultValue: any = ''): any {\r\n    return this.selectedBlock()?.props?.[key] ?? defaultValue;\r\n  }\r\n\r\n  getBlockProp(block: TemplateBlock, key: string, defaultValue: any = ''): any {\r\n    return block.props?.[key] ?? defaultValue;\r\n  }\r\n\r\n  isSelected(blockId: string): boolean {\r\n    return this.selectedBlockId() === blockId;\r\n  }\r\n}",
+            "styleUrl": "./template-builder.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"builder-container d-flex h-100\">\r\n  \r\n  <!-- ===== SIDEBAR: Block Picker + Editor ===== -->\r\n  <aside class=\"sidebar bg-white border-end d-flex flex-column\" style=\"width: 320px;\">\r\n    \r\n    <!-- Block Picker Section -->\r\n    <div class=\"p-3 border-bottom\">\r\n      <h5 class=\"mb-3\">Add Blocks</h5>\r\n      <div class=\"d-grid gap-2\">\r\n        <button class=\"btn btn-outline-primary btn-sm\" (click)=\"addBlock('header')\">\r\n          + Add Header\r\n        </button>\r\n        <button class=\"btn btn-outline-primary btn-sm\" (click)=\"addBlock('text')\">\r\n          + Add Text\r\n        </button>\r\n        <button class=\"btn btn-outline-primary btn-sm\" (click)=\"addBlock('image')\">\r\n          + Add Image\r\n        </button>\r\n        <button class=\"btn btn-outline-primary btn-sm\" (click)=\"addBlock('button')\">\r\n          + Add Button\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Block Editor Section (shows when block is selected) -->\r\n    <div class=\"flex-grow-1 p-3 overflow-auto\">\r\n      <h5 class=\"mb-3\">Edit Block</h5>\r\n      \r\n      <!-- Empty State: No block selected -->\r\n      <div *ngIf=\"!selectedBlock()\" class=\"text-muted small\">\r\n        <p>Select a block in the preview to edit its content.</p>\r\n      </div>\r\n\r\n      <!-- Header Block Editor -->\r\n      <div *ngIf=\"selectedBlock()?.type === 'header'\" class=\"editor-form\">\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Title</label>\r\n          <input \r\n            type=\"text\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('title', '')\"\r\n            (input)=\"updateProp('title', $any($event.target).value)\"\r\n            placeholder=\"Enter header title\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Logo URL</label>\r\n          <input \r\n            type=\"url\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('logoUrl', '')\"\r\n            (input)=\"updateProp('logoUrl', $any($event.target).value)\"\r\n            placeholder=\"https://example.com/logo.png\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Background Color</label>\r\n          <input \r\n            type=\"color\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('bgColor', '#00B4D8')\"\r\n            (input)=\"updateProp('bgColor', $any($event.target).value)\"\r\n          />\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Text Block Editor -->\r\n      <div *ngIf=\"selectedBlock()?.type === 'text'\" class=\"editor-form\">\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Content</label>\r\n          <textarea \r\n            class=\"form-control form-control-sm\"\r\n            rows=\"4\"\r\n            [value]=\"getProp('content', '')\"\r\n            (input)=\"updateProp('content', $any($event.target).value)\"\r\n            placeholder=\"Enter your text...\"\r\n          ></textarea>\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Alignment</label>\r\n          <select \r\n            class=\"form-select form-select-sm\"\r\n            [value]=\"getProp('alignment', 'left')\"\r\n            (change)=\"updateProp('alignment', $any($event.target).value)\"\r\n          >\r\n            <option value=\"left\">Left</option>\r\n            <option value=\"center\">Center</option>\r\n            <option value=\"right\">Right</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Image Block Editor -->\r\n      <div *ngIf=\"selectedBlock()?.type === 'image'\" class=\"editor-form\">\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Image URL</label>\r\n          <input \r\n            type=\"url\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('src', '')\"\r\n            (input)=\"updateProp('src', $any($event.target).value)\"\r\n            placeholder=\"https://example.com/image.jpg\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Alt Text</label>\r\n          <input \r\n            type=\"text\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('alt', '')\"\r\n            (input)=\"updateProp('alt', $any($event.target).value)\"\r\n            placeholder=\"Describe the image\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Width</label>\r\n          <input \r\n            type=\"text\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('width', '100%')\"\r\n            (input)=\"updateProp('width', $any($event.target).value)\"\r\n            placeholder=\"100%, 50%, 300px, etc.\"\r\n          />\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Button Block Editor -->\r\n      <div *ngIf=\"selectedBlock()?.type === 'button'\" class=\"editor-form\">\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Button Label</label>\r\n          <input \r\n            type=\"text\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('label', '')\"\r\n            (input)=\"updateProp('label', $any($event.target).value)\"\r\n            placeholder=\"Click Here\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Link URL</label>\r\n          <input \r\n            type=\"url\" \r\n            class=\"form-control form-control-sm\"\r\n            [value]=\"getProp('url', '#')\"\r\n            (input)=\"updateProp('url', $any($event.target).value)\"\r\n            placeholder=\"https://example.com\"\r\n          />\r\n        </div>\r\n        <div class=\"mb-3\">\r\n          <label class=\"form-label small\">Variant</label>\r\n          <select \r\n            class=\"form-select form-select-sm\"\r\n            [value]=\"getProp('variant', 'primary')\"\r\n            (change)=\"updateProp('variant', $any($event.target).value)\"\r\n          >\r\n            <option value=\"primary\">Primary</option>\r\n            <option value=\"secondary\">Secondary</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </aside>\r\n\r\n  <!-- ===== PREVIEW PANEL ===== -->\r\n  <main class=\"preview flex-grow-1 d-flex flex-column align-items-center p-4\" style=\"background-color: #e9ecef;\">\r\n    \r\n    <div class=\"preview-header mb-3 text-muted small\">\r\n      Email Preview (600px width)\r\n    </div>\r\n    \r\n    <!-- Email Canvas -->\r\n    <div class=\"email-canvas bg-white shadow-sm\" style=\"width: 600px; min-height: 600px;\">\r\n      \r\n      <!-- Empty State -->\r\n      <div *ngIf=\"blocks().length === 0\" class=\"empty-state d-flex flex-column align-items-center justify-content-center h-100 text-muted\">\r\n        <p class=\"mb-0\">Add blocks from the sidebar to start building your template</p>\r\n      </div>\r\n\r\n      <!-- Blocks List -->\r\n      <div *ngFor=\"let block of blocks()\" \r\n           class=\"block-wrapper position-relative border-bottom\"\r\n           [class.selected]=\"isSelected(block.id)\"\r\n           (click)=\"selectBlock(block.id)\"\r\n           style=\"cursor: pointer;\">\r\n        \r\n        <!-- Remove Button (shows on hover) -->\r\n        <button \r\n          class=\"btn-remove btn btn-sm btn-danger position-absolute top-0 end-0 m-2\"\r\n          (click)=\"removeBlock(block.id, $event)\"\r\n          title=\"Remove block\"\r\n          style=\"display: none; z-index: 10;\">\r\n          x\r\n        </button>\r\n        \r\n        <!-- Render Block Component Based on Type -->\r\n        <app-header-block \r\n          *ngIf=\"block.type === 'header'\"\r\n          [title]=\"getBlockProp(block, 'title', '')\"\r\n          [logoUrl]=\"getBlockProp(block, 'logoUrl', '')\"\r\n          [bgColor]=\"getBlockProp(block, 'bgColor', '#00B4D8')\">\r\n        </app-header-block>\r\n\r\n        <app-text-block \r\n          *ngIf=\"block.type === 'text'\"\r\n          [content]=\"getBlockProp(block, 'content', '')\"\r\n          [alignment]=\"getBlockProp(block, 'alignment', 'left')\">\r\n        </app-text-block>\r\n\r\n        <app-image-block \r\n          *ngIf=\"block.type === 'image'\"\r\n          [src]=\"getBlockProp(block, 'src', '')\"\r\n          [alt]=\"getBlockProp(block, 'alt', 'Image')\"\r\n          [width]=\"getBlockProp(block, 'width', '100%')\">\r\n        </app-image-block>\r\n\r\n        <app-button-block \r\n          *ngIf=\"block.type === 'button'\"\r\n          [label]=\"getBlockProp(block, 'label', '')\"\r\n          [url]=\"getBlockProp(block, 'url', '#')\"\r\n          [variant]=\"getBlockProp(block, 'variant', 'primary')\">\r\n        </app-button-block>\r\n      </div>\r\n    </div>\r\n  </main>\r\n</div>"
+        },
+        {
             "name": "TextBlockComponent",
             "id": "component-TextBlockComponent-4091338ffc5dba91cb9592beb02d916c42f76e1b0d14b034bf1deccc5cfaa029b9ac4c0e0c5330c3327abdabb4415f0f23560b5c9313bb89fc02eeae2a7100a5",
             "file": "src/app/design-system/components/text-block/text-block.component.ts",
@@ -352,11 +1266,44 @@
         "functions": [],
         "typealiases": [
             {
+                "name": "BlockType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"header\" | \"text\" | \"image\" | \"button\"",
+                "file": "src/app/design-system/models/block.models.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "ButtonVariant",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"primary\" | \"secondary\"",
+                "file": "src/app/design-system/models/block.models.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
                 "name": "ButtonVariant",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"primary\" | \"secondary\"",
                 "file": "src/app/design-system/components/button-block/button-block.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "TextAlignment",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"left\" | \"center\" | \"right\"",
+                "file": "src/app/design-system/models/block.models.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -392,6 +1339,41 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/app/design-system/models/block.models.ts": [
+                {
+                    "name": "BlockType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"header\" | \"text\" | \"image\" | \"button\"",
+                    "file": "src/app/design-system/models/block.models.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                },
+                {
+                    "name": "ButtonVariant",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"primary\" | \"secondary\"",
+                    "file": "src/app/design-system/models/block.models.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                },
+                {
+                    "name": "TextAlignment",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"left\" | \"center\" | \"right\"",
+                    "file": "src/app/design-system/models/block.models.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ],
             "src/app/design-system/components/button-block/button-block.component.ts": [
                 {
                     "name": "ButtonVariant",
@@ -502,6 +1484,72 @@
                 "name": "TextAlignment",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/design-system/models/block.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "BlockProps",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/design-system/models/block.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "TemplateBlock",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/design-system/models/block.models.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "BlockType",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/design-system/models/block.models.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ButtonVariant",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/design-system/models/block.models.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TextAlignment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/template-builder/components/template-builder/template-builder.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TemplateBuilderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/template-builder/services/template.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "TemplateService",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
                 "status": "low"
             }
         ]

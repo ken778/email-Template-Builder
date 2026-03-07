@@ -1,0 +1,225 @@
+<div class="builder-container d-flex h-100">
+  
+  <!-- ===== SIDEBAR: Block Picker + Editor ===== -->
+  <aside class="sidebar bg-white border-end d-flex flex-column" style="width: 320px;">
+    
+    <!-- Block Picker Section -->
+    <div class="p-3 border-bottom">
+      <h5 class="mb-3">Add Blocks</h5>
+      <div class="d-grid gap-2">
+        <button class="btn btn-outline-primary btn-sm" (click)="addBlock('header')">
+          + Add Header
+        </button>
+        <button class="btn btn-outline-primary btn-sm" (click)="addBlock('text')">
+          + Add Text
+        </button>
+        <button class="btn btn-outline-primary btn-sm" (click)="addBlock('image')">
+          + Add Image
+        </button>
+        <button class="btn btn-outline-primary btn-sm" (click)="addBlock('button')">
+          + Add Button
+        </button>
+      </div>
+    </div>
+
+    <!-- Block Editor Section (shows when block is selected) -->
+    <div class="flex-grow-1 p-3 overflow-auto">
+      <h5 class="mb-3">Edit Block</h5>
+      
+      <!-- Empty State: No block selected -->
+      <div *ngIf="!selectedBlock()" class="text-muted small">
+        <p>Select a block in the preview to edit its content.</p>
+      </div>
+
+      <!-- Header Block Editor -->
+      <div *ngIf="selectedBlock()?.type === 'header'" class="editor-form">
+        <div class="mb-3">
+          <label class="form-label small">Title</label>
+          <input 
+            type="text" 
+            class="form-control form-control-sm"
+            [value]="getProp('title', '')"
+            (input)="updateProp('title', $any($event.target).value)"
+            placeholder="Enter header title"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Logo URL</label>
+          <input 
+            type="url" 
+            class="form-control form-control-sm"
+            [value]="getProp('logoUrl', '')"
+            (input)="updateProp('logoUrl', $any($event.target).value)"
+            placeholder="https://example.com/logo.png"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Background Color</label>
+          <input 
+            type="color" 
+            class="form-control form-control-sm"
+            [value]="getProp('bgColor', '#00B4D8')"
+            (input)="updateProp('bgColor', $any($event.target).value)"
+          />
+        </div>
+      </div>
+
+      <!-- Text Block Editor -->
+      <div *ngIf="selectedBlock()?.type === 'text'" class="editor-form">
+        <div class="mb-3">
+          <label class="form-label small">Content</label>
+          <textarea 
+            class="form-control form-control-sm"
+            rows="4"
+            [value]="getProp('content', '')"
+            (input)="updateProp('content', $any($event.target).value)"
+            placeholder="Enter your text..."
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Alignment</label>
+          <select 
+            class="form-select form-select-sm"
+            [value]="getProp('alignment', 'left')"
+            (change)="updateProp('alignment', $any($event.target).value)"
+          >
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Image Block Editor -->
+      <div *ngIf="selectedBlock()?.type === 'image'" class="editor-form">
+        <div class="mb-3">
+          <label class="form-label small">Image URL</label>
+          <input 
+            type="url" 
+            class="form-control form-control-sm"
+            [value]="getProp('src', '')"
+            (input)="updateProp('src', $any($event.target).value)"
+            placeholder="https://example.com/image.jpg"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Alt Text</label>
+          <input 
+            type="text" 
+            class="form-control form-control-sm"
+            [value]="getProp('alt', '')"
+            (input)="updateProp('alt', $any($event.target).value)"
+            placeholder="Describe the image"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Width</label>
+          <input 
+            type="text" 
+            class="form-control form-control-sm"
+            [value]="getProp('width', '100%')"
+            (input)="updateProp('width', $any($event.target).value)"
+            placeholder="100%, 50%, 300px, etc."
+          />
+        </div>
+      </div>
+
+      <!-- Button Block Editor -->
+      <div *ngIf="selectedBlock()?.type === 'button'" class="editor-form">
+        <div class="mb-3">
+          <label class="form-label small">Button Label</label>
+          <input 
+            type="text" 
+            class="form-control form-control-sm"
+            [value]="getProp('label', '')"
+            (input)="updateProp('label', $any($event.target).value)"
+            placeholder="Click Here"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Link URL</label>
+          <input 
+            type="url" 
+            class="form-control form-control-sm"
+            [value]="getProp('url', '#')"
+            (input)="updateProp('url', $any($event.target).value)"
+            placeholder="https://example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label small">Variant</label>
+          <select 
+            class="form-select form-select-sm"
+            [value]="getProp('variant', 'primary')"
+            (change)="updateProp('variant', $any($event.target).value)"
+          >
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== PREVIEW PANEL ===== -->
+  <main class="preview flex-grow-1 d-flex flex-column align-items-center p-4" style="background-color: #e9ecef;">
+    
+    <div class="preview-header mb-3 text-muted small">
+      Email Preview (600px width)
+    </div>
+    
+    <!-- Email Canvas -->
+    <div class="email-canvas bg-white shadow-sm" style="width: 600px; min-height: 600px;">
+      
+      <!-- Empty State -->
+      <div *ngIf="blocks().length === 0" class="empty-state d-flex flex-column align-items-center justify-content-center h-100 text-muted">
+        <p class="mb-0">Add blocks from the sidebar to start building your template</p>
+      </div>
+
+      <!-- Blocks List -->
+      <div *ngFor="let block of blocks()" 
+           class="block-wrapper position-relative border-bottom"
+           [class.selected]="isSelected(block.id)"
+           (click)="selectBlock(block.id)"
+           style="cursor: pointer;">
+        
+        <!-- Remove Button (shows on hover) -->
+        <button 
+          class="btn-remove btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+          (click)="removeBlock(block.id, $event)"
+          title="Remove block"
+          style="display: none; z-index: 10;">
+          x
+        </button>
+        
+        <!-- Render Block Component Based on Type -->
+        <app-header-block 
+          *ngIf="block.type === 'header'"
+          [title]="getBlockProp(block, 'title', '')"
+          [logoUrl]="getBlockProp(block, 'logoUrl', '')"
+          [bgColor]="getBlockProp(block, 'bgColor', '#00B4D8')">
+        </app-header-block>
+
+        <app-text-block 
+          *ngIf="block.type === 'text'"
+          [content]="getBlockProp(block, 'content', '')"
+          [alignment]="getBlockProp(block, 'alignment', 'left')">
+        </app-text-block>
+
+        <app-image-block 
+          *ngIf="block.type === 'image'"
+          [src]="getBlockProp(block, 'src', '')"
+          [alt]="getBlockProp(block, 'alt', 'Image')"
+          [width]="getBlockProp(block, 'width', '100%')">
+        </app-image-block>
+
+        <app-button-block 
+          *ngIf="block.type === 'button'"
+          [label]="getBlockProp(block, 'label', '')"
+          [url]="getBlockProp(block, 'url', '#')"
+          [variant]="getBlockProp(block, 'variant', 'primary')">
+        </app-button-block>
+      </div>
+    </div>
+  </main>
+</div>
