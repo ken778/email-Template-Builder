@@ -1,0 +1,20 @@
+.ds-header {
+  padding: calc(var(--ds-spacing-unit) * 3);
+  text-align: center;
+}
+
+.ds-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ds-title {
+  color: white;
+  margin: 0;
+}
+
+.ds-logo {
+  height: 40px;
+}
