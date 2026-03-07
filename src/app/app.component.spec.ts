@@ -1,10 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TemplateBuilderComponent } from './template-builder/components/template-builder/template-builder.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, TemplateBuilderComponent],
     }).compileComponents();
   });
 
@@ -14,16 +15,20 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'everlytic-email-builder' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('everlytic-email-builder');
-  });
-
-  it('should render title', () => {
+  it('should render TemplateBuilderComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
+    
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, everlytic-email-builder');
+    const templateBuilder = compiled.querySelector('app-template-builder');
+    
+    expect(templateBuilder).toBeTruthy();
+  });
+
+  it('should have correct title property', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    
+    expect(app.title).toBe('everlytic-email-builder');
   });
 });

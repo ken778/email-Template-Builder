@@ -1,0 +1,87 @@
+.builder-container {
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--ds-font-family);
+}
+
+.sidebar {
+  height: 100%;
+  overflow-y: auto;
+  border-right: 1px solid #dee2e6;
+}
+
+.preview {
+  height: 100%;
+  overflow-y: auto;
+  background-color: #e9ecef;
+}
+
+.email-canvas {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--ds-border-radius);
+}
+
+.empty-state {
+  min-height: 400px;
+  opacity: 0.7;
+}
+
+.block-wrapper {
+  position: relative;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px var(--ds-primary);
+
+    .btn-remove {
+      display: block !important;
+    }
+  }
+
+  &.selected {
+    box-shadow: inset 0 0 0 3px var(--ds-primary);
+  }
+}
+
+.btn-remove {
+  opacity: 0.9;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.editor-form {
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-control,
+  .form-select {
+    font-size: 0.875rem;
+  }
+}
+
+// Responsive: Stack on mobile
+@media (max-width: 992px) {
+  .builder-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100% !important;
+    height: auto;
+    max-height: 40vh;
+  }
+  
+  .email-canvas {
+    width: 100% !important;
+  }
+}
