@@ -1,6 +1,6 @@
 <div class="builder-container d-flex h-100">
   
-  <!-- ===== SIDEBAR: Block Picker + Editor ===== -->
+  <!--SIDEBAR: Block Picker + Editor-->
   <aside class="sidebar bg-white border-end d-flex flex-column" style="width: 320px;">
     
     <!-- Block Picker Section -->
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <!-- Block Editor Section (shows when block is selected) -->
+    <!-- Block Editor Section -->
     <div class="flex-grow-1 p-3 overflow-auto">
       <h5 class="mb-3">Edit Block</h5>
       
@@ -161,12 +161,9 @@
     </div>
   </aside>
 
-  <!-- ===== PREVIEW PANEL ===== -->
+  <!--PREVIEW PANEL -->
   <main class="preview flex-grow-1 d-flex flex-column align-items-center p-4" style="background-color: #e9ecef;">
     
-    <div class="preview-header mb-3 text-muted small">
-      Email Preview (600px width)
-    </div>
     
     <!-- Email Canvas -->
     <div class="email-canvas bg-white shadow-sm" style="width: 600px; min-height: 600px;">
@@ -183,13 +180,13 @@
            (click)="selectBlock(block.id)"
            style="cursor: pointer;">
         
-        <!-- Remove Button (shows on hover) -->
+        <!-- Remove Button-->
         <button 
           class="btn-remove btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
           (click)="removeBlock(block.id, $event)"
           title="Remove block"
           style="display: none; z-index: 10;">
-          x
+          X
         </button>
         
         <!-- Render Block Component Based on Type -->
