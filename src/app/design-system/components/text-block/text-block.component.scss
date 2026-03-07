@@ -1,0 +1,22 @@
+.ds-text {
+  padding: calc(var(--ds-spacing-unit) * 2);
+  color: var(--ds-secondary);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
