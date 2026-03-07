@@ -1,0 +1,25 @@
+.ds-button-wrapper {
+  padding: calc(var(--ds-spacing-unit) * 2);
+}
+
+.ds-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: var(--ds-border-radius);
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.ds-btn-primary {
+  background-color: var(--ds-primary);
+}
+
+.ds-btn-secondary {
+  background-color: var(--ds-secondary);
+}

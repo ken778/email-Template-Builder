@@ -1,0 +1,10 @@
+.ds-image-wrapper {
+  padding: calc(var(--ds-spacing-unit) * 2);
+}
+
+img {
+  display: block;
+  height: auto;
+  border-radius: var(--ds-border-radius);
+  max-width: 100%;
+}
