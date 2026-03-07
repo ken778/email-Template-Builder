@@ -1,16 +1,7 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
+/* ✅ Bootstrap CSS */
+@import "bootstrap/dist/css/bootstrap.min.css";
 
-//Grid system 
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/utilities";
-@import "bootstrap/scss/utilities/api";
-
-
-//design tokens
+/* ✅ Your tokens + global styles */
 @import "app/design-system/styles/tokens";
 
 body {
