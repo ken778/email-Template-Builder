@@ -64,7 +64,7 @@ export class TemplateService {
         };
       case 'image':
         return {
-          src: 'https://via.placeholder.com/600x200?text=Your+Image',
+          src: 'https://placehold.net/default.png',
           alt: 'Placeholder image',
           width: '100%'
         };

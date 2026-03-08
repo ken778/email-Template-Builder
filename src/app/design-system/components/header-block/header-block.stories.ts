@@ -16,7 +16,7 @@ export const Default: StoryObj<HeaderBlockComponent> = {
 export const WithLogo: StoryObj<HeaderBlockComponent> = {
   args: { 
     title: 'Everlytic Newsletter', 
-    logoUrl: 'https://via.placeholder.com/40', 
+    logoUrl: 'https://placehold.net/default.png', 
     bgColor: '#2D3748' 
   },
 };
