@@ -8,7 +8,7 @@ export default {
 
 export const Default: StoryObj<ImageBlockComponent> = {
   args: { 
-    src: 'https://via.placeholder.com/600x200', 
+    src: 'https://placehold.net/default.png', 
     alt: 'Placeholder Image', 
     width: '100%' 
   },
@@ -16,7 +16,7 @@ export const Default: StoryObj<ImageBlockComponent> = {
 
 export const CustomWidth: StoryObj<ImageBlockComponent> = {
   args: { 
-    src: 'https://via.placeholder.com/300x200', 
+    src: 'https://placehold.net/default.png', 
     alt: 'Smaller Image', 
     width: '50%' 
   },
